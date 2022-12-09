@@ -50,4 +50,6 @@ type rsServerResponse struct {
 	BlockCacheGeneralBloomMetaHitCount  int64 `json:"blockCacheGeneralBloomMetaHitCount"`
 	BlockCacheDeleteFamilyBloomHitCount  int64 `json:"blockCacheDeleteFamilyBloomHitCount"`
 	BlockCacheTrailerHitCount  int64 `json:"blockCacheTrailerHitCount"`
+	L1CacheHitRatio  float64 `json:"l1CacheHitRatio"`
+	L2CacheHitRatio  float64 `json:"l2CacheHitRatio"`
 }

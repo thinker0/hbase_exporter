@@ -608,6 +608,30 @@ func NewRsServer(logger log.Logger, url *url.URL) *RsServer {
 				},
 				Labels: defaultHBaseRsServerLabelServerValues,
 			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "l1_cache_hit_ratio"),
+					"The number of l1_cache_hit_ratio.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.L1CacheHitRatio)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "l2_cache_hit_ratio"),
+					"The number of l2_cache_hit_ratio.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.L2CacheHitRatio)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
 		},
 	}
 }
