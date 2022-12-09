@@ -242,6 +242,372 @@ func NewRsServer(logger log.Logger, url *url.URL) *RsServer {
 				},
 				Labels: defaultHBaseRsServerLabelServerValues,
 			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheFreeSize"),
+					"The number of BlockCacheFreeSize.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheFreeSize)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheCount"),
+					"The number of BlockCacheCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheSize"),
+					"The number of BlockCacheSize.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheSize)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheCountHitPercent"),
+					"The number of BlockCacheCountHitPercent.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheCountHitPercent)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheExpressHitPercent"),
+					"The number of BlockCacheExpressHitPercent.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheExpressHitPercent)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheHitCount"),
+					"The number of BlockCacheHitCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheHitCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheHitCountPrimary"),
+					"The number of BlockCacheHitCountPrimary.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheHitCountPrimary)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheMissCount"),
+					"The number of BlockCacheMissCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheMissCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheMissCountPrimary"),
+					"The number of BlockCacheMissCountPrimary.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheMissCountPrimary)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheEvictionCount"),
+					"The number of BlockCacheEvictionCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheEvictionCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheEvictionCountPrimary"),
+					"The number of BlockCacheEvictionCountPrimary.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheEvictionCountPrimary)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheFailedInsertionCount"),
+					"The number of BlockCacheFailedInsertionCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheFailedInsertionCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheDataMissCount"),
+					"The number of BlockCacheDataMissCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheDataMissCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheLeafIndexMissCount"),
+					"The number of BlockCacheLeafIndexMissCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheLeafIndexMissCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheBloomChunkMissCount"),
+					"The number of BlockCacheBloomChunkMissCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheBloomChunkMissCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheMetaMissCount"),
+					"The number of BlockCacheMetaMissCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheMetaMissCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheRootIndexMissCount"),
+					"The number of BlockCacheRootIndexMissCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheRootIndexMissCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheIntermediateIndexMissCount"),
+					"The number of BlockCacheIntermediateIndexMissCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheIntermediateIndexMissCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheFileInfoMissCount"),
+					"The number of BlockCacheFileInfoMissCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheFileInfoMissCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheGeneralBloomMetaMissCount"),
+					"The number of BlockCacheGeneralBloomMetaMissCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheGeneralBloomMetaMissCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheDeleteFamilyBloomMissCount"),
+					"The number of BlockCacheDeleteFamilyBloomMissCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheDeleteFamilyBloomMissCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheTrailerMissCount"),
+					"The number of BlockCacheTrailerMissCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheTrailerMissCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheDataHitCount"),
+					"The number of BlockCacheDataHitCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheDataHitCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheLeafIndexHitCount"),
+					"The number of BlockCacheLeafIndexHitCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheLeafIndexHitCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheBloomChunkHitCount"),
+					"The number of BlockCacheBloomChunkHitCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheBloomChunkHitCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheMetaHitCount"),
+					"The number of BlockCacheMetaHitCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheMetaHitCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheRootIndexHitCount"),
+					"The number of BlockCacheRootIndexHitCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheRootIndexHitCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheIntermediateIndexHitCount"),
+					"The number of BlockCacheIntermediateIndexHitCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheIntermediateIndexHitCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheFileInfoHitCount"),
+					"The number of BlockCacheFileInfoHitCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheFileInfoHitCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheGeneralBloomMetaHitCount"),
+					"The number of BlockCacheGeneralBloomMetaHitCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheGeneralBloomMetaHitCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheDeleteFamilyBloomHitCount"),
+					"The number of BlockCacheDeleteFamilyBloomHitCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheDeleteFamilyBloomHitCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "BlockCacheTrailerHitCount"),
+					"The number of BlockCacheTrailerHitCount.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheTrailerHitCount)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
 		},
 	}
 }
