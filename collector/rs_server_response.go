@@ -18,4 +18,36 @@ type rsServerResponse struct {
 	SlowGetCount          int     `json:"slowGetCount"`
 	SlowPutCount          int     `json:"slowPutCount"`
 	SlowIncrementCount    int     `json:"slowIncrementCount"`
+	BlockCacheFreeSize  int64 `json:"blockCacheFreeSize"`
+	BlockCacheCount  int64 `json:"blockCacheCount"`
+	BlockCacheSize  int64 `json:"blockCacheSize"`
+	BlockCacheCountHitPercent  float64 `json:"blockCacheCountHitPercent"`
+	BlockCacheExpressHitPercent  float64 `json:"blockCacheExpressHitPercent"`
+	BlockCacheHitCount  int64 `json:"blockCacheHitCount"`
+	BlockCacheHitCountPrimary  int64 `json:"blockCacheHitCountPrimary"`
+	BlockCacheMissCount  int64 `json:"blockCacheMissCount"`
+	BlockCacheMissCountPrimary  int64 `json:"blockCacheMissCountPrimary"`
+	BlockCacheEvictionCount  int64 `json:"blockCacheEvictionCount"`
+	BlockCacheEvictionCountPrimary  int64 `json:"blockCacheEvictionCountPrimary"`
+	BlockCacheFailedInsertionCount  int64 `json:"blockCacheFailedInsertionCount"`
+	BlockCacheDataMissCount  int64 `json:"blockCacheDataMissCount"`
+	BlockCacheLeafIndexMissCount  int64 `json:"blockCacheLeafIndexMissCount"`
+	BlockCacheBloomChunkMissCount  int64 `json:"blockCacheBloomChunkMissCount"`
+	BlockCacheMetaMissCount  int64 `json:"blockCacheMetaMissCount"`
+	BlockCacheRootIndexMissCount  int64 `json:"blockCacheRootIndexMissCount"`
+	BlockCacheIntermediateIndexMissCount  int64 `json:"blockCacheIntermediateIndexMissCount"`
+	BlockCacheFileInfoMissCount  int64 `json:"blockCacheFileInfoMissCount"`
+	BlockCacheGeneralBloomMetaMissCount  int64 `json:"blockCacheGeneralBloomMetaMissCount"`
+	BlockCacheDeleteFamilyBloomMissCount  int64 `json:"blockCacheDeleteFamilyBloomMissCount"`
+	BlockCacheTrailerMissCount  int64 `json:"blockCacheTrailerMissCount"`
+	BlockCacheDataHitCount  int64 `json:"blockCacheDataHitCount"`
+	BlockCacheLeafIndexHitCount  int64 `json:"blockCacheLeafIndexHitCount"`
+	BlockCacheBloomChunkHitCount  int64 `json:"blockCacheBloomChunkHitCount"`
+	BlockCacheMetaHitCount  int64 `json:"blockCacheMetaHitCount"`
+	BlockCacheRootIndexHitCount  int64 `json:"blockCacheRootIndexHitCount"`
+	BlockCacheIntermediateIndexHitCount  int64 `json:"blockCacheIntermediateIndexHitCount"`
+	BlockCacheFileInfoHitCount  int64 `json:"blockCacheFileInfoHitCount"`
+	BlockCacheGeneralBloomMetaHitCount  int64 `json:"blockCacheGeneralBloomMetaHitCount"`
+	BlockCacheDeleteFamilyBloomHitCount  int64 `json:"blockCacheDeleteFamilyBloomHitCount"`
+	BlockCacheTrailerHitCount  int64 `json:"blockCacheTrailerHitCount"`
 }
