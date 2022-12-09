@@ -9,11 +9,11 @@ import (
 	"net/url"
 	"strings"
 
-	"../utils"
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/tidwall/gjson"
+	"hbase_exporter/utils"
 )
 
 var (

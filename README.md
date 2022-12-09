@@ -136,3 +136,11 @@ Start in regionserver:
 | hbase_region_write_request_count         | gauge | writeRequestCount         |
 | hbase_region_num_files_compacted_count   | gauge | numFilesCompactedCount    |
 | hbase_region_num_bytes_compacted_count   | gauge | numBytesCompactedCount    |
+
+
+3分钟带你掌握 go mod 导入本地包: 
+https://cloud.tencent.com/developer/article/1998266
+
+用下面的编译命令即可编译出针对linux系统的二进制文件:
+ GOOS=linux GOARCH=amd64 go build hbase_exporter.go
+

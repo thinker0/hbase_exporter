@@ -8,13 +8,13 @@ import (
 	"os"
 	"strings"
 
-	"./collector"
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/prometheus/common/version"
 	"gopkg.in/alecthomas/kingpin.v2"
+	"hbase_exporter/collector"
 )
 
 func getLogger(loglevel, logoutput, logfmt string) log.Logger {
