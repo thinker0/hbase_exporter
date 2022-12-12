@@ -25,3 +25,22 @@ func SplitHBaseRegionStr(data string) []string {
 
 	return res
 }
+
+func SplitHBaseLatencyStr(data string) []string {
+	// Split the string just like: Namespace_n1_table_t1_metric_m1
+	// return: [n1 t1 m1]
+
+	var res []string
+	flagList := []string{"Namespace_", "_table_", "_metric_"}
+	temp1 := strings.SplitN(data, flagList[0], 2)
+
+	temp2 := strings.SplitN(temp1[1], flagList[1], 2)
+	res = append(res, temp2[0])
+
+	temp3 := strings.SplitN(temp2[1], flagList[2], 2)
+	res = append(res, temp3[0])
+
+	res = append(res, temp3[1])
+
+	return res
+}
