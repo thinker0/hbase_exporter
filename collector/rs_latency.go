@@ -426,7 +426,7 @@ func (r *RsLatency) Collect(ch chan<- prometheus.Metric) {
 				Labels...,
 			)
 
-		} else if jmx.Metric == "deleteBatchTime_999th_percentile" {
+		} else if jmx.Metric == "deleteBatchTime_99.9th_percentile" {
 			ch <- prometheus.MustNewConstMetric(
 				prometheus.NewDesc(
 					prometheus.BuildFQName(namespace, "", "deleteBatchTime_999th_percentile"),
@@ -569,7 +569,7 @@ func (r *RsLatency) Collect(ch chan<- prometheus.Metric) {
 				Labels...,
 			)
 
-		} else if jmx.Metric == "appendTime_999th_percentile" {
+		} else if jmx.Metric == "appendTime_99.9th_percentile" {
 			ch <- prometheus.MustNewConstMetric(
 				prometheus.NewDesc(
 					prometheus.BuildFQName(namespace, "", "appendTime_999th_percentile"),
@@ -712,7 +712,7 @@ func (r *RsLatency) Collect(ch chan<- prometheus.Metric) {
 				Labels...,
 			)
 
-		} else if jmx.Metric == "getTime_999th_percentile" {
+		} else if jmx.Metric == "getTime_99.9th_percentile" {
 			ch <- prometheus.MustNewConstMetric(
 				prometheus.NewDesc(
 					prometheus.BuildFQName(namespace, "", "getTime_999th_percentile"),
@@ -855,7 +855,7 @@ func (r *RsLatency) Collect(ch chan<- prometheus.Metric) {
 				Labels...,
 			)
 
-		} else if jmx.Metric == "incrementTime_999th_percentile" {
+		} else if jmx.Metric == "incrementTime_99.9th_percentile" {
 			ch <- prometheus.MustNewConstMetric(
 				prometheus.NewDesc(
 					prometheus.BuildFQName(namespace, "", "incrementTime_999th_percentile"),
@@ -998,7 +998,7 @@ func (r *RsLatency) Collect(ch chan<- prometheus.Metric) {
 				Labels...,
 			)
 
-		} else if jmx.Metric == "putBatchTime_999th_percentile" {
+		} else if jmx.Metric == "putBatchTime_99.9th_percentile" {
 			ch <- prometheus.MustNewConstMetric(
 				prometheus.NewDesc(
 					prometheus.BuildFQName(namespace, "", "putBatchTime_999th_percentile"),
@@ -1141,7 +1141,7 @@ func (r *RsLatency) Collect(ch chan<- prometheus.Metric) {
 				Labels...,
 			)
 
-		} else if jmx.Metric == "putTime_999th_percentile" {
+		} else if jmx.Metric == "putTime_99.9th_percentile" {
 			ch <- prometheus.MustNewConstMetric(
 				prometheus.NewDesc(
 					prometheus.BuildFQName(namespace, "", "putTime_999th_percentile"),
@@ -1284,7 +1284,7 @@ func (r *RsLatency) Collect(ch chan<- prometheus.Metric) {
 				Labels...,
 			)
 
-		} else if jmx.Metric == "scanSize_999th_percentile" {
+		} else if jmx.Metric == "scanSize_99.9th_percentile" {
 			ch <- prometheus.MustNewConstMetric(
 				prometheus.NewDesc(
 					prometheus.BuildFQName(namespace, "", "scanSize_999th_percentile"),
@@ -1427,7 +1427,7 @@ func (r *RsLatency) Collect(ch chan<- prometheus.Metric) {
 				Labels...,
 			)
 
-		} else if jmx.Metric == "checkAndMutateTime_999th_percentile" {
+		} else if jmx.Metric == "checkAndMutateTime_99.9th_percentile" {
 			ch <- prometheus.MustNewConstMetric(
 				prometheus.NewDesc(
 					prometheus.BuildFQName(namespace, "", "checkAndMutateTime_999th_percentile"),
@@ -1570,7 +1570,7 @@ func (r *RsLatency) Collect(ch chan<- prometheus.Metric) {
 				Labels...,
 			)
 
-		} else if jmx.Metric == "checkAndPutTime_999th_percentile" {
+		} else if jmx.Metric == "checkAndPutTime_99.9th_percentile" {
 			ch <- prometheus.MustNewConstMetric(
 				prometheus.NewDesc(
 					prometheus.BuildFQName(namespace, "", "checkAndPutTime_999th_percentile"),
@@ -1713,7 +1713,7 @@ func (r *RsLatency) Collect(ch chan<- prometheus.Metric) {
 				Labels...,
 			)
 
-		} else if jmx.Metric == "checkAndDeleteTime_999th_percentile" {
+		} else if jmx.Metric == "checkAndDeleteTime_99.9th_percentile" {
 			ch <- prometheus.MustNewConstMetric(
 				prometheus.NewDesc(
 					prometheus.BuildFQName(namespace, "", "checkAndDeleteTime_999th_percentile"),
@@ -1856,7 +1856,7 @@ func (r *RsLatency) Collect(ch chan<- prometheus.Metric) {
 				Labels...,
 			)
 
-		} else if jmx.Metric == "scanTime_999th_percentile" {
+		} else if jmx.Metric == "scanTime_99.9th_percentile" {
 			ch <- prometheus.MustNewConstMetric(
 				prometheus.NewDesc(
 					prometheus.BuildFQName(namespace, "", "scanTime_999th_percentile"),
@@ -1999,7 +1999,7 @@ func (r *RsLatency) Collect(ch chan<- prometheus.Metric) {
 				Labels...,
 			)
 
-		} else if jmx.Metric == "deleteTime_999th_percentile" {
+		} else if jmx.Metric == "deleteTime_99.9th_percentile" {
 			ch <- prometheus.MustNewConstMetric(
 				prometheus.NewDesc(
 					prometheus.BuildFQName(namespace, "", "deleteTime_999th_percentile"),
