@@ -318,6 +318,1819 @@ func (r *RsLatency) Collect(ch chan<- prometheus.Metric) {
 				Labels...,
 			)
 
+		} else if jmx.Metric == "deleteBatchTime_max" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteBatchTime_max"),
+					"The number of deleteBatchTime_max.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteBatchTime_mean" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteBatchTime_mean"),
+					"The number of deleteBatchTime_mean.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteBatchTime_25th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteBatchTime_25th_percentile"),
+					"The number of deleteBatchTime_25th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteBatchTime_median" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteBatchTime_median"),
+					"The number of deleteBatchTime_median.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteBatchTime_75th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteBatchTime_75th_percentile"),
+					"The number of deleteBatchTime_75th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteBatchTime_90th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteBatchTime_90th_percentile"),
+					"The number of deleteBatchTime_90th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteBatchTime_95th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteBatchTime_95th_percentile"),
+					"The number of deleteBatchTime_95th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteBatchTime_98th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteBatchTime_98th_percentile"),
+					"The number of deleteBatchTime_98th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteBatchTime_99th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteBatchTime_99th_percentile"),
+					"The number of deleteBatchTime_99th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteBatchTime_99.9th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteBatchTime_99.9th_percentile"),
+					"The number of deleteBatchTime_99.9th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "appendTime_num_ops" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "appendTime_num_ops"),
+					"The number of appendTime_num_ops.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+		} else if jmx.Metric == "appendTime_min" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "appendTime_min"),
+					"The number of appendTime_min.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "appendTime_max" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "appendTime_max"),
+					"The number of appendTime_max.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "appendTime_mean" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "appendTime_mean"),
+					"The number of appendTime_mean.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "appendTime_25th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "appendTime_25th_percentile"),
+					"The number of appendTime_25th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "appendTime_median" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "appendTime_median"),
+					"The number of appendTime_median.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "appendTime_75th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "appendTime_75th_percentile"),
+					"The number of appendTime_75th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "appendTime_90th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "appendTime_90th_percentile"),
+					"The number of appendTime_90th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "appendTime_95th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "appendTime_95th_percentile"),
+					"The number of appendTime_95th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "appendTime_98th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "appendTime_98th_percentile"),
+					"The number of appendTime_98th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "appendTime_99th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "appendTime_99th_percentile"),
+					"The number of appendTime_99th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "appendTime_99.9th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "appendTime_99.9th_percentile"),
+					"The number of appendTime_99.9th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "getTime_num_ops" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "getTime_num_ops"),
+					"The number of getTime_num_ops.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+		} else if jmx.Metric == "getTime_min" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "getTime_min"),
+					"The number of getTime_min.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "getTime_max" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "getTime_max"),
+					"The number of getTime_max.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "getTime_mean" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "getTime_mean"),
+					"The number of getTime_mean.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "getTime_25th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "getTime_25th_percentile"),
+					"The number of getTime_25th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "getTime_median" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "getTime_median"),
+					"The number of getTime_median.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "getTime_75th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "getTime_75th_percentile"),
+					"The number of getTime_75th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "getTime_90th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "getTime_90th_percentile"),
+					"The number of getTime_90th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "getTime_95th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "getTime_95th_percentile"),
+					"The number of getTime_95th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "getTime_98th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "getTime_98th_percentile"),
+					"The number of getTime_98th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "getTime_99th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "getTime_99th_percentile"),
+					"The number of getTime_99th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "getTime_99.9th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "getTime_99.9th_percentile"),
+					"The number of getTime_99.9th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "incrementTime_num_ops" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "incrementTime_num_ops"),
+					"The number of incrementTime_num_ops.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+		} else if jmx.Metric == "incrementTime_min" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "incrementTime_min"),
+					"The number of incrementTime_min.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "incrementTime_max" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "incrementTime_max"),
+					"The number of incrementTime_max.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "incrementTime_mean" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "incrementTime_mean"),
+					"The number of incrementTime_mean.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "incrementTime_25th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "incrementTime_25th_percentile"),
+					"The number of incrementTime_25th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "incrementTime_median" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "incrementTime_median"),
+					"The number of incrementTime_median.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "incrementTime_75th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "incrementTime_75th_percentile"),
+					"The number of incrementTime_75th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "incrementTime_90th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "incrementTime_90th_percentile"),
+					"The number of incrementTime_90th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "incrementTime_95th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "incrementTime_95th_percentile"),
+					"The number of incrementTime_95th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "incrementTime_98th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "incrementTime_98th_percentile"),
+					"The number of incrementTime_98th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "incrementTime_99th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "incrementTime_99th_percentile"),
+					"The number of incrementTime_99th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "incrementTime_99.9th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "incrementTime_99.9th_percentile"),
+					"The number of incrementTime_99.9th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putBatchTime_num_ops" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putBatchTime_num_ops"),
+					"The number of putBatchTime_num_ops.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+		} else if jmx.Metric == "putBatchTime_min" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putBatchTime_min"),
+					"The number of putBatchTime_min.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putBatchTime_max" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putBatchTime_max"),
+					"The number of putBatchTime_max.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putBatchTime_mean" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putBatchTime_mean"),
+					"The number of putBatchTime_mean.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putBatchTime_25th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putBatchTime_25th_percentile"),
+					"The number of putBatchTime_25th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putBatchTime_median" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putBatchTime_median"),
+					"The number of putBatchTime_median.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putBatchTime_75th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putBatchTime_75th_percentile"),
+					"The number of putBatchTime_75th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putBatchTime_90th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putBatchTime_90th_percentile"),
+					"The number of putBatchTime_90th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putBatchTime_95th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putBatchTime_95th_percentile"),
+					"The number of putBatchTime_95th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putBatchTime_98th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putBatchTime_98th_percentile"),
+					"The number of putBatchTime_98th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putBatchTime_99th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putBatchTime_99th_percentile"),
+					"The number of putBatchTime_99th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putBatchTime_99.9th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putBatchTime_99.9th_percentile"),
+					"The number of putBatchTime_99.9th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putTime_num_ops" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putTime_num_ops"),
+					"The number of putTime_num_ops.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+		} else if jmx.Metric == "putTime_min" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putTime_min"),
+					"The number of putTime_min.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putTime_max" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putTime_max"),
+					"The number of putTime_max.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putTime_mean" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putTime_mean"),
+					"The number of putTime_mean.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putTime_25th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putTime_25th_percentile"),
+					"The number of putTime_25th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putTime_median" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putTime_median"),
+					"The number of putTime_median.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putTime_75th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putTime_75th_percentile"),
+					"The number of putTime_75th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putTime_90th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putTime_90th_percentile"),
+					"The number of putTime_90th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putTime_95th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putTime_95th_percentile"),
+					"The number of putTime_95th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putTime_98th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putTime_98th_percentile"),
+					"The number of putTime_98th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putTime_99th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putTime_99th_percentile"),
+					"The number of putTime_99th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "putTime_99.9th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "putTime_99.9th_percentile"),
+					"The number of putTime_99.9th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanSize_num_ops" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanSize_num_ops"),
+					"The number of scanSize_num_ops.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+		} else if jmx.Metric == "scanSize_min" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanSize_min"),
+					"The number of scanSize_min.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanSize_max" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanSize_max"),
+					"The number of scanSize_max.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanSize_mean" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanSize_mean"),
+					"The number of scanSize_mean.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanSize_25th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanSize_25th_percentile"),
+					"The number of scanSize_25th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanSize_median" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanSize_median"),
+					"The number of scanSize_median.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanSize_75th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanSize_75th_percentile"),
+					"The number of scanSize_75th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanSize_90th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanSize_90th_percentile"),
+					"The number of scanSize_90th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanSize_95th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanSize_95th_percentile"),
+					"The number of scanSize_95th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanSize_98th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanSize_98th_percentile"),
+					"The number of scanSize_98th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanSize_99th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanSize_99th_percentile"),
+					"The number of scanSize_99th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanSize_99.9th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanSize_99.9th_percentile"),
+					"The number of scanSize_99.9th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndMutateTime_num_ops" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndMutateTime_num_ops"),
+					"The number of checkAndMutateTime_num_ops.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+		} else if jmx.Metric == "checkAndMutateTime_min" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndMutateTime_min"),
+					"The number of checkAndMutateTime_min.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndMutateTime_max" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndMutateTime_max"),
+					"The number of checkAndMutateTime_max.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndMutateTime_mean" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndMutateTime_mean"),
+					"The number of checkAndMutateTime_mean.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndMutateTime_25th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndMutateTime_25th_percentile"),
+					"The number of checkAndMutateTime_25th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndMutateTime_median" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndMutateTime_median"),
+					"The number of checkAndMutateTime_median.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndMutateTime_75th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndMutateTime_75th_percentile"),
+					"The number of checkAndMutateTime_75th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndMutateTime_90th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndMutateTime_90th_percentile"),
+					"The number of checkAndMutateTime_90th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndMutateTime_95th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndMutateTime_95th_percentile"),
+					"The number of checkAndMutateTime_95th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndMutateTime_98th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndMutateTime_98th_percentile"),
+					"The number of checkAndMutateTime_98th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndMutateTime_99th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndMutateTime_99th_percentile"),
+					"The number of checkAndMutateTime_99th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndMutateTime_99.9th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndMutateTime_99.9th_percentile"),
+					"The number of checkAndMutateTime_99.9th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndPutTime_num_ops" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndPutTime_num_ops"),
+					"The number of checkAndPutTime_num_ops.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+		} else if jmx.Metric == "checkAndPutTime_min" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndPutTime_min"),
+					"The number of checkAndPutTime_min.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndPutTime_max" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndPutTime_max"),
+					"The number of checkAndPutTime_max.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndPutTime_mean" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndPutTime_mean"),
+					"The number of checkAndPutTime_mean.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndPutTime_25th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndPutTime_25th_percentile"),
+					"The number of checkAndPutTime_25th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndPutTime_median" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndPutTime_median"),
+					"The number of checkAndPutTime_median.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndPutTime_75th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndPutTime_75th_percentile"),
+					"The number of checkAndPutTime_75th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndPutTime_90th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndPutTime_90th_percentile"),
+					"The number of checkAndPutTime_90th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndPutTime_95th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndPutTime_95th_percentile"),
+					"The number of checkAndPutTime_95th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndPutTime_98th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndPutTime_98th_percentile"),
+					"The number of checkAndPutTime_98th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndPutTime_99th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndPutTime_99th_percentile"),
+					"The number of checkAndPutTime_99th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndPutTime_99.9th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndPutTime_99.9th_percentile"),
+					"The number of checkAndPutTime_99.9th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndDeleteTime_num_ops" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndDeleteTime_num_ops"),
+					"The number of checkAndDeleteTime_num_ops.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+		} else if jmx.Metric == "checkAndDeleteTime_min" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndDeleteTime_min"),
+					"The number of checkAndDeleteTime_min.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndDeleteTime_max" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndDeleteTime_max"),
+					"The number of checkAndDeleteTime_max.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndDeleteTime_mean" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndDeleteTime_mean"),
+					"The number of checkAndDeleteTime_mean.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndDeleteTime_25th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndDeleteTime_25th_percentile"),
+					"The number of checkAndDeleteTime_25th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndDeleteTime_median" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndDeleteTime_median"),
+					"The number of checkAndDeleteTime_median.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndDeleteTime_75th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndDeleteTime_75th_percentile"),
+					"The number of checkAndDeleteTime_75th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndDeleteTime_90th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndDeleteTime_90th_percentile"),
+					"The number of checkAndDeleteTime_90th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndDeleteTime_95th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndDeleteTime_95th_percentile"),
+					"The number of checkAndDeleteTime_95th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndDeleteTime_98th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndDeleteTime_98th_percentile"),
+					"The number of checkAndDeleteTime_98th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndDeleteTime_99th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndDeleteTime_99th_percentile"),
+					"The number of checkAndDeleteTime_99th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "checkAndDeleteTime_99.9th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "checkAndDeleteTime_99.9th_percentile"),
+					"The number of checkAndDeleteTime_99.9th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanTime_num_ops" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanTime_num_ops"),
+					"The number of scanTime_num_ops.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+		} else if jmx.Metric == "scanTime_min" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanTime_min"),
+					"The number of scanTime_min.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanTime_max" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanTime_max"),
+					"The number of scanTime_max.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanTime_mean" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanTime_mean"),
+					"The number of scanTime_mean.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanTime_25th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanTime_25th_percentile"),
+					"The number of scanTime_25th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanTime_median" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanTime_median"),
+					"The number of scanTime_median.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanTime_75th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanTime_75th_percentile"),
+					"The number of scanTime_75th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanTime_90th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanTime_90th_percentile"),
+					"The number of scanTime_90th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanTime_95th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanTime_95th_percentile"),
+					"The number of scanTime_95th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanTime_98th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanTime_98th_percentile"),
+					"The number of scanTime_98th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanTime_99th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanTime_99th_percentile"),
+					"The number of scanTime_99th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "scanTime_99.9th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "scanTime_99.9th_percentile"),
+					"The number of scanTime_99.9th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteTime_num_ops" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteTime_num_ops"),
+					"The number of deleteTime_num_ops.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+		} else if jmx.Metric == "deleteTime_min" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteTime_min"),
+					"The number of deleteTime_min.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteTime_max" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteTime_max"),
+					"The number of deleteTime_max.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteTime_mean" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteTime_mean"),
+					"The number of deleteTime_mean.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteTime_25th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteTime_25th_percentile"),
+					"The number of deleteTime_25th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteTime_median" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteTime_median"),
+					"The number of deleteTime_median.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteTime_75th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteTime_75th_percentile"),
+					"The number of deleteTime_75th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteTime_90th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteTime_90th_percentile"),
+					"The number of deleteTime_90th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteTime_95th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteTime_95th_percentile"),
+					"The number of deleteTime_95th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteTime_98th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteTime_98th_percentile"),
+					"The number of deleteTime_98th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteTime_99th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteTime_99th_percentile"),
+					"The number of deleteTime_99th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "deleteTime_99.9th_percentile" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "deleteTime_99.9th_percentile"),
+					"The number of deleteTime_99.9th_percentile.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "tableWriteQueryPerSecond_count" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "tableWriteQueryPerSecond_count"),
+					"The number of tableWriteQueryPerSecond_count.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "tableWriteQueryPerSecond_mean_rate" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "tableWriteQueryPerSecond_mean_rate"),
+					"The number of tableWriteQueryPerSecond_mean_rate.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "tableWriteQueryPerSecond_1min_rate" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "tableWriteQueryPerSecond_1min_rate"),
+					"The number of tableWriteQueryPerSecond_1min_rate.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "tableWriteQueryPerSecond_5min_rate" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "tableWriteQueryPerSecond_5min_rate"),
+					"The number of tableWriteQueryPerSecond_5min_rate.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "tableWriteQueryPerSecond_15min_rate" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "tableWriteQueryPerSecond_15min_rate"),
+					"The number of tableWriteQueryPerSecond_15min_rate.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "tableReadQueryPerSecond_count" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "tableReadQueryPerSecond_count"),
+					"The number of tableReadQueryPerSecond_count.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "tableReadQueryPerSecond_mean_rate" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "tableReadQueryPerSecond_mean_rate"),
+					"The number of tableReadQueryPerSecond_mean_rate.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "tableReadQueryPerSecond_1min_rate" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "tableReadQueryPerSecond_1min_rate"),
+					"The number of tableReadQueryPerSecond_1min_rate.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "tableReadQueryPerSecond_5min_rate" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "tableReadQueryPerSecond_5min_rate"),
+					"The number of tableReadQueryPerSecond_5min_rate.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
+		} else if jmx.Metric == "tableReadQueryPerSecond_15min_rate" {
+			ch <- prometheus.MustNewConstMetric(
+				prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, "", "tableReadQueryPerSecond_15min_rate"),
+					"The number of tableReadQueryPerSecond_15min_rate.",
+					defaultHBaseRsLatencyLabels, nil,
+				),
+				Type,
+				Value,
+				Labels...,
+			)
+
 		}
 	}
 }
