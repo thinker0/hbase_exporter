@@ -124,7 +124,7 @@ func main() {
 		prometheus.MustRegister(collector.NewMasterServer(logger, hbaseMasterURL))
 	} else {
 		prometheus.MustRegister(collector.NewHBaseJvm(logger, hbaseRegionserverURL))
-		prometheus.MustRegister(collector.NewHBaseSystem(logger, hbaseMasterURL))
+		prometheus.MustRegister(collector.NewHBaseSystem(logger, hbaseRegionserverURL))
 		prometheus.MustRegister(collector.NewRsServer(logger, hbaseRegionserverURL))
 
 		prometheus.MustRegister(collector.NewRsRegion(logger, hbaseRegionserverURL))
