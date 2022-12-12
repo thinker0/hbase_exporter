@@ -14,10 +14,6 @@ import (
 	"github.com/tidwall/gjson"
 )
 
-const (
-	namespace = "hbase"
-)
-
 var (
 	defaultHBaseSystemLabels      = []string{"metricsName", "modelerType"}
 	defaultHBaseLabelSystemValues = func(hbaseSystem hbaseSystemResponse) []string {
