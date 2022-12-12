@@ -73,10 +73,10 @@ func main() {
 			Default("/metrics").Envar("WEB_TELEMETRY_PATH").String()
 		hbaseMasterURI = kingpin.Flag("hbase.master.uri",
 			"HTTP jmx address of an HBase master node.").
-			Default("http://localhost:60010/jmx").Envar("HBASE_MASTER_URL").String()
+			Default("http://localhost:16010/jmx").Envar("HBASE_MASTER_URL").String()
 		hbaseRegionserverURI = kingpin.Flag("hbase.regionserver.uri",
 			"HTTP jmx address of an HBase regionserver node.").
-			Default("http://localhost:60030/jmx").Envar("HBASE_REGIONSERVER_URL").String()
+			Default("http://localhost:16030/jmx").Envar("HBASE_REGIONSERVER_URL").String()
 		hbaseIsMaster = kingpin.Flag("hbase.master",
 			"Is hbase master.").
 			Default("false").Envar("HBASE_IS_MASTER").Bool()
