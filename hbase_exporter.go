@@ -128,6 +128,7 @@ func main() {
 		prometheus.MustRegister(collector.NewRsServer(logger, hbaseRegionserverURL))
 
 		prometheus.MustRegister(collector.NewRsRegion(logger, hbaseRegionserverURL))
+		prometheus.MustRegister(collector.NewRsLatency(logger, hbaseRegionserverURL))
 	}
 	level.Info(logger).Log("msg", "Build context", "build_context", version.BuildContext())
 	level.Info(logger).Log("msg", "Starting hbase_exporter", "version", version.Info())
