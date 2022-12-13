@@ -147,3 +147,17 @@ go mod tidy
 用下面的编译命令即可编译出针对linux系统的二进制文件:
  GOOS=linux GOARCH=amd64 go build hbase_exporter.go
 
+
+export HBASE_MASTER_OPTS="$HBASE_MASTER_OPTS -javaagent:/usr/lib/hbase/jmx_prometheus_javaagent-0.17.2.jar=26010:/usr/lib/hbase/conf/jmx_hbase.yaml"
+export HBASE_REGIONSERVER_OPTS="$HBASE_REGIONSERVER_OPTS -javaagent:/usr/lib/hbase/jmx_prometheus_javaagent-0.17.2.jar=26030:/usr/lib/hbase/conf/jmx_hbase.yaml"
+export HBASE_REGIONSERVER_OPTS="$HBASE_REGIONSERVER_OPTS -javaagent:/usr/lib/hbase/jmx_prometheus_javaagent-0.17.2.jar=26030:/usr/lib/hbase/conf/jmx_hbase.yaml"
+
+sudo systemctl restart hbase-master
+sudo systemctl restart hbase-regionserver
+ 
+sudo systemctl status hbase-master
+sudo systemctl status hbase-regionserver
+ 
+这个是正确的，但是上面的那个好像也可以
+export HBASE_REGIONSERVER_OPTS="$HBASE_REGIONSERVER_OPTS -javaagent:/usr/lib/hbase/jmx_prometheus_javaagent-0.17.2.jar=0.0.0.0:26030:/usr/lib/hbase/conf/jmx_hbase.yaml"
+export HBASE_MASTER_OPTS=-javaagent:/usr/lib/hbase/jmx_prometheus_javaagent-0.17.2.jar=0.0.0.0:26010:/usr/lib/hbase/conf/jmx_hbase.yaml
