@@ -77,6 +77,18 @@ func NewRsServer(logger log.Logger, url *url.URL) *RsServer {
 			{
 				Type: prometheus.GaugeValue,
 				Desc: prometheus.NewDesc(
+					prometheus.BuildFQName(namespace, subsystem, "block_cache_size"),
+					"The number of blockCacheSize.",
+					defaultHBaseRsServerLabels, nil,
+				),
+				Value: func(rsServer rsServerResponse) float64 {
+					return float64(rsServer.BlockCacheSize)
+				},
+				Labels: defaultHBaseRsServerLabelServerValues,
+			},
+			{
+				Type: prometheus.GaugeValue,
+				Desc: prometheus.NewDesc(
 					prometheus.BuildFQName(namespace, subsystem, "region_count"),
 					"The number of region_count.",
 					defaultHBaseRsServerLabels, nil,

@@ -4,6 +4,7 @@ type rsServerResponse struct {
 	Host                  string  `json:"tag.Hostname"`
 	Role                  string  `json:"tag.Context"`
 	MemStoreSize          int     `json:"memStoreSize"`
+	BlockCacheSize        int     `json:"blockCacheSize"`
 	RegionCount           int     `json:"regionCount"`
 	StoreCount            int     `json:"storeCount"`
 	StoreFileCount        int     `json:"storeFileCount"`
