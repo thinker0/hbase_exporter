@@ -132,8 +132,15 @@ func (m *MasterServer) fetchAndDecodeMasterServer() (masterServerResponse, error
 	var msr masterServerResponse
 
 	u := *m.url
-	url := u.String() + "?" + "qry=Hadoop:service=HBase,name=Master,sub=Server"
-	res, err := http.Get(url)
+	//url := u.String() + "?" + "qry=Hadoop:service=HBase,name=Master,sub=Server"
+	url := url.URL{
+		Scheme:   u.Scheme,
+		Host:     u.Host,
+		User:     u.User,
+		RawQuery: "qry=Hadoop:service=HBase,name=Master,sub=Server",
+	}
+
+	res, err := http.Get(url.String())
 
 	if err != nil {
 		return msr, fmt.Errorf("failed to get cluster health from %s://%s:%s%s: %s",

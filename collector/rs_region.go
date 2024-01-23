@@ -9,7 +9,6 @@ import (
 	"net/url"
 	"strings"
 
-	"hbase_exporter/utils"
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"
 	"github.com/prometheus/client_golang/prometheus"
@@ -80,8 +79,15 @@ func (m *RsRegion) Describe(ch chan<- *prometheus.Desc) {
 func (r *RsRegion) fetchAndDecodeRsRegion() (string, string, error) {
 	u := *r.url
 	r.jmxs = r.jmxs[0:0]
-	url := u.String() + "?" + "qry=Hadoop:service=HBase,name=RegionServer,sub=Regions"
-	res, err := http.Get(url)
+	//url := u.String() + "?" + "qry=Hadoop:service=HBase,name=RegionServer,sub=Regions"
+	url := url.URL{
+		Scheme:   u.Scheme,
+		Host:     u.Host,
+		User:     u.User,
+		RawQuery: "qry=Hadoop:service=HBase,name=RegionServer,sub=Regions",
+	}
+
+	res, err := http.Get(url.String())
 
 	if err != nil {
 		return "", "", fmt.Errorf("failed to get cluster health from %s://%s:%s%s: %s",

@@ -8,7 +8,6 @@ import (
 	"os"
 	"strings"
 
-	"hbase_exporter/collector"
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"
 	"github.com/prometheus/client_golang/prometheus"
@@ -90,6 +89,12 @@ func main() {
 		logOutput = kingpin.Flag("log.output",
 			"Sets the log output. Valid outputs are stdout and stderr").
 			Default("stdout").Envar("LOG_OUTPUT").String()
+		user = kingpin.Flag("user",
+			"Sets the user for basic auth").
+			Default("").Envar("USER").String()
+		password = kingpin.Flag("password",
+			"Sets the password for basic auth").
+			Default("").Envar("PASSWORD").String()
 	)
 
 	kingpin.Version(version.Print(Name))
@@ -99,6 +104,7 @@ func main() {
 	logger := getLogger(*logLevel, *logOutput, *logFormat)
 
 	hbaseMasterURL, err := url.Parse(*hbaseMasterURI)
+	hbaseMasterURL.User = url.UserPassword(*user, *password)
 	if err != nil {
 		_ = level.Error(logger).Log(
 			"msg", "failed to parse hbase.master.uri",
@@ -108,6 +114,7 @@ func main() {
 	}
 
 	hbaseRegionserverURL, err := url.Parse(*hbaseRegionserverURI)
+	hbaseRegionserverURL.User = url.UserPassword(*user, *password)
 	if err != nil {
 		_ = level.Error(logger).Log(
 			"msg", "failed to parse hbase.regionserver.uri",

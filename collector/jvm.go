@@ -36,9 +36,9 @@ type hbaseJvmMetric struct {
 }
 
 type HBaseJvm struct {
-	logger log.Logger
-	url    *url.URL
-
+	logger                          log.Logger
+	url                             *url.URL
+	user                            *url.Userinfo
 	up                              prometheus.Gauge
 	totalScrapes, jsonParseFailures prometheus.Counter
 
@@ -168,8 +168,14 @@ func (m *HBaseJvm) fetchAndDecodeHBaseJvm() (hbaseJvmResponse, error) {
 	var mjr hbaseJvmResponse
 
 	u := *m.url
-	url := u.String() + "?" + "qry=Hadoop:service=HBase,name=JvmMetrics"
-	res, err := http.Get(url)
+	// url := u.String() + "?" + "qry=Hadoop:service=HBase,name=JvmMetrics"
+	url := url.URL{
+		Scheme:   u.Scheme,
+		Host:     u.Host,
+		User:     u.User,
+		RawQuery: "qry=Hadoop:service=HBase,name=JvmMetrics",
+	}
+	res, err := http.Get(url.String())
 
 	if err != nil {
 		return mjr, fmt.Errorf("failed to get cluster health from %s://%s:%s%s: %s",

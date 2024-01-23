@@ -224,8 +224,15 @@ func (m *HBaseSystem) fetchAndDecodeHBaseSystem() (hbaseSystemResponse, error) {
 	var mjr hbaseSystemResponse
 
 	u := *m.url
-	url := u.String() + "?" + "qry=java.lang:type=OperatingSystem"
-	res, err := http.Get(url)
+	// url := u.String() + "?" + "qry=java.lang:type=OperatingSystem"
+	url := url.URL{
+		Scheme:   u.Scheme,
+		Host:     u.Host,
+		User:     u.User,
+		RawQuery: "qry=java.lang:type=OperatingSystem",
+	}
+
+	res, err := http.Get(url.String())
 
 	if err != nil {
 		return mjr, fmt.Errorf("failed to get cluster health from %s://%s:%s%s: %s",
